@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-bakuo@#l^s%mj7^xr316$c%dxcsloa%6(vkm5e&txqv-+uu^%'
+SECRET_KEY = 'x+)-(pp^+yoh_7w$45x$=)l#_iix7x_pcdp2=(0hxcsw_l4__*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hackathon_tree'
 ]
 
 MIDDLEWARE = [
@@ -76,14 +75,11 @@ WSGI_APPLICATION = 'tree_webapp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mydatabase',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '127.0.0.0',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators
